@@ -5,3 +5,10 @@ Norovirus is a highly contagious virus that is a common cause of acute gastroent
 
 <img width="709" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/90cc15fc-9b48-4876-9b2c-f23858c8b735">
 
+Problem:
+1.What is the BLAST score on rivm.nl? It has different scale from the BLAST bitscore.
+2.What if the top 1 hit only contains ORF1 or ORF2 region, but the query sequence contains both? Is it possible? (If this happens, MSA against ORF1 or ORF1 might not be conducted.) 
+solution: Top N hit? How to decide N? What threshold? 
+3.Some reference sequences for RdRp contain VP1 region but are not included as the reference sequences for VP1, as a result, their VP1 region are not annotated.
+Solution: reference sequences for RdRp and VP1 should all be viruligned against ORF1 and ORF2 xml
+4.PAUP* analysis. How to automatically assign a genotype? Parsing the NEXUS output file? 
