@@ -3,4 +3,5 @@ Norovirus is a highly contagious virus that is a common cause of acute gastroent
 
 <img width="698" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/8340031f-169a-4a79-b11f-baaa2e185241">
 
-<img width="710" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/664eb046-6755-4663-89d1-80d00b929811">
+<img width="709" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/90cc15fc-9b48-4876-9b2c-f23858c8b735">
+
