@@ -6,6 +6,8 @@ Norovirus is a highly contagious virus that is a common cause of acute gastroent
 <img width="709" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/90cc15fc-9b48-4876-9b2c-f23858c8b735">
 
 Problem:
+1. Three GIII capsid type seqs are wrongfully included in GII seqs
+
 1.What is the BLAST score on rivm.nl? It has different scale from the BLAST bitscore.
 
 2.What if the top 1 hit only contains ORF1 or ORF2 region, but the query sequence contains both? Is it possible? (If this happens, MSA against ORF1 or ORF1 might not be conducted.) 
@@ -18,4 +20,4 @@ Solution: reference sequences for RdRp and VP1 should all be viruligned against 
 
 4.PAUP* analysis. How to automatically assign a genotype? Parsing the NEXUS output file? 
 
-5. Three GIII capsid type seqs are wrongfully included in GII seqs
+
