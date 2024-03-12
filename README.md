@@ -17,3 +17,5 @@ solution: Top N hit? How to decide N? What threshold?
 Solution: reference sequences for RdRp and VP1 should all be viruligned against ORF1 and ORF2 xml
 
 4.PAUP* analysis. How to automatically assign a genotype? Parsing the NEXUS output file? 
+
+5. Three GIII capsid type seqs are wrongfully included in GII seqs
