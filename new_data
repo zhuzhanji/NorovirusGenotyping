@@ -1,7 +1,0 @@
-Reference dataset of Chhabra et al 2019 (Supplementary material 1)
-NT Sequences automatically downloaded from GenBank
-ORF1 and ORF2 extracted based on annotations on GenBank
-RdRp/GII/KX354134.1	was deleted because it does not contain ORF1.
-RdRp/GII/X76716.1 does not have ORF1 information on Genbank, so it was extracted using virulign. 
-There’s no F529737 on GenBank, so it is removed from the dataset.
-
