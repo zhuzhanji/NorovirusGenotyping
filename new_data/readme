@@ -10,3 +10,5 @@ There’s no F529737 on GenBank, so it is removed from the dataset.
 3.A_annotation.csv: ORF coordinates of the nt sequences in A.fasta
 4.all.orf: all the ORF sequences from different genogroups
   id format: genogroup|[Ptype  genotype]|genbank accesion number
+5.rdrp_taxonomy.csv: References strains for norovirus RdRp P-types
+6.vp1__taxonomy.csv: References strains for norovirus VP1 genotypes
