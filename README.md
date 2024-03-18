@@ -16,10 +16,10 @@ In addtion, 30 norovirus whole genome sequences from RefSeq dataset[^5] and GenB
 
 
 
+<img width="661" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/877673d4-159c-4077-9f54-d5d21de959ba">
 
-<img width="698" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/8340031f-169a-4a79-b11f-baaa2e185241">
+<img width="710" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7145f545-b53e-4589-a709-7cb72dbc681d">
 
-<img width="709" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/90cc15fc-9b48-4876-9b2c-f23858c8b735">
 
 # Result
 
