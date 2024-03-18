@@ -2,12 +2,16 @@
 ## Background
 Norovirus is a highly contagious virus that is a common cause of acute gastroenteritis, often referred to as the stomach flu or winter vomiting bug. It belongs to the family Caliciviridae and is a non-enveloped, single-stranded RNA virus. Norovirus is a significant public health concern due to its high prevalence, ability to cause outbreaks, and impact on individuals and communities. With no specific antiviral treatment, it causes an estimated 200,000 deaths per year, including 50,000 child deaths[^1]. Norovirus exhibits notable genetic diversity, with 10 genogroups, GI–GX, and >48 genotypes identified[^2]. Analyzing high throughput data of norovirus is crucial for gaining insights into its mechanisms of infection and transmission. However, existing taxonomic classification tools for norovirus are server-based, presenting challenges in both data throughput and user-friendliness. There is a pressing need for an efficient, locally-operated, command-line-based taxonomic classification tool for norovirus.
 
-# Method
+# Methods
 305 nucleotide sequences for VP1 region phylogenetic analyses, and 232 nucleotide sequences for RdRp region phylogenetic analyses, representing the genetic diversity of all norovirus genogroups and genotypes were downloaded from GenBank, as described previously[^3]. (last download date: March 16 2024). 305 Complete ORF2 sequences (ranging from 530 to 580 amino acids in length) were extracted and translated from the former using Biopython[^4]. 232 partial nucleotide sequences (762 nucleotides) of the RdRp region at the 3′-end of ORF1 were extracted from the latter.
 
-In addtion, 20 norovirus whole genome sequences from RefSeq dataset[^5] were also downloaded from GenBank.
 
-![sequences](https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7c695662-7de8-477f-9346-4a30dc7d1865" "sequences")
+![sequences](https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7c695662-7de8-477f-9346-4a30dc7d1865  "sequences" )
+
+In addtion, 20 norovirus whole genome sequences from RefSeq dataset[^5] were also downloaded from GenBank.
+<img width="187" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/001b98a9-6ea3-437a-8e76-06e9220d7c1f">
+
+
 
 
 
