@@ -6,11 +6,12 @@ Norovirus is a highly contagious virus that is a common cause of acute gastroent
 305 nucleotide sequences for VP1 region phylogenetic analyses, and 232 nucleotide sequences for RdRp region phylogenetic analyses, representing the genetic diversity of all norovirus genogroups and genotypes were downloaded from GenBank, as described previously[^3]. (last download date: March 16 2024). 305 Complete ORF2 sequences (ranging from 530 to 580 amino acids in length) were extracted and translated from the former using Biopython[^4]. 232 partial nucleotide sequences (762 nucleotides) of the RdRp region at the 3′-end of ORF1 were extracted from the latter.
 
 
+
 ![sequences](https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7c695662-7de8-477f-9346-4a30dc7d1865  "sequences" )
 
 In addtion, 20 norovirus whole genome sequences from RefSeq dataset[^5] were also downloaded from GenBank.
-<img width="187" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/001b98a9-6ea3-437a-8e76-06e9220d7c1f">
 
+<img width="600" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/bcc44256-9c9f-4d1c-a64a-97f0f459f067">
 
 
 
