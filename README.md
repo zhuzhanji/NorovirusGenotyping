@@ -9,7 +9,7 @@ Norovirus is a highly contagious virus that is a common cause of acute gastroent
 
 ![sequences](https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7c695662-7de8-477f-9346-4a30dc7d1865  "sequences" )
 
-In addtion, 20 norovirus whole genome sequences from RefSeq dataset[^5] were also downloaded from GenBank.
+In addtion, 30 norovirus whole genome sequences from RefSeq dataset[^5] and GenBank were also downloaded.
 
 <img width="600" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/bcc44256-9c9f-4d1c-a64a-97f0f459f067">
 
