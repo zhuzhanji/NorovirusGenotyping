@@ -43,13 +43,19 @@ In 2013 the Norovirus Classification Working Group (NCWG) proposed a standardize
 
   
 ##### 1.6 Detailed Overview of current norovirus taxonomy tools
-RIVM
-calicivirustypingtool.cdc
 
-  Analyzing high throughput data of norovirus is crucial for gaining insights into its mechanisms of infection and transmission. However, existing taxonomic classification tools for norovirus are server-based, presenting challenges in both data throughput and user-friendliness. There is a pressing need for an efficient, locally-operated, command-line-based taxonomic classification tool for norovirus.
+Two gold-standard norovirus typing tools are available, the NoroNet typing tool[^11] and the human calicivirus typing tool (HuCaT)[^12].
+
+The Norovirus Typing Tool (https://www.rivm.nl/mpf/norovirus/typingtool) uses a BLAST algorithm against a set of reference sequences followed by phylogenetic analysis to assign norovirus genotypes and P-types.[^11] 
+[^11]:Kroneman A, Vennema H, Deforche K, v d Avoort H, Penaranda S, Oberste MS, et al., An automated genotyping tool for enteroviruses and noroviruses, J. Clin. Virol 51 (2011) 121–125. 
+
+Hucat([HuCaT](https://calicivirustypingtool.cdc.gov/bctyping.html)) uses a set of curated reference sequences that are compared to query sequences using a k-mer (DNA substring) based algorithm. Outputs include alignments and phylogenetic trees of the 12 top matching reference sequences for each query.[^12]
+
+[^12]:Tatusov RL, Chhabra P, Diez-Valcarce M, Barclay L, Cannon JL, Vinjé J. 2021. Human calicivirus typing tool: a web-based tool for genotyping human norovirus and sapovirus sequences. J Clin Virol 134:104718. https://doi.org/10.1016/j.jcv.2020.104718.
 
 
-  
+Analyzing high throughput data of norovirus is crucial for gaining insights into its mechanisms of infection and transmission. However, both tools are web-based, creating a break in the processing of sequencing data. There is a pressing need for an efficient, locally-operated, command-line-based taxonomic classification tool for norovirus.
+
 
 
 # Methods
