@@ -89,7 +89,7 @@ In addtion, 30 norovirus whole genome sequences from RefSeq dataset[Brister JR, 
 
 <img width="661" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/877673d4-159c-4077-9f54-d5d21de959ba">
 
-<img width="710" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7145f545-b53e-4589-a709-7cb72dbc681d">
+<img width="714" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/d73f9ede-c0bd-4d7d-999b-38671986a626">
 
 
 # Results
