@@ -101,7 +101,7 @@ Phylogenetic trees are constructed using the neighbor-joining method with a HKY8
 
 # Results
 ## Genogrouping
-The test dataset contains 5986 sequences of the Caliciviridae family, including noroviruses. The result of our genotyping tool is compared against the result of RIVM online typing tool. The accuracy of our group assignment is 98.66%. Most of the discrepancies are due to the assignment of norovirus genogroup GIV, GVI, GIX and GX. It should be noted that GVI, GVIII, GIX and GX noroviruses are not included in the reference dataset of RIVM. So, if we exclude these cases, the accuracy of our group assignment would be still higher.
+The test dataset contains 5986 sequences of the Caliciviridae family, including noroviruses. The result of our genotyping tool is compared against the result of RIVM online typing tool. The accuracy of our group assignment is 98.66%. Most of the discrepancies are due to the assignment of norovirus genogroup GIV, GVI, GIX and GX. It should be noted that GVI, GVIII, GIX and GX noroviruses are not included in the reference dataset of RIVM. So, if we exclude these cases, the accuracy of our group assignment would be higher.
 
 <img width="377" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/6d207111-c299-429d-8b38-c321fe7a2011">
 
