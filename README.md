@@ -86,7 +86,7 @@ However, both tools are web-based, creating a break in the processing of sequenc
 ![sequences](https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7c695662-7de8-477f-9346-4a30dc7d1865  "sequences" )
 
 ## Assignment of Genogroup
-In the first step, the query sequence is analyzed against the Blast dataset. If the expectation (E)-value of the top hit is less than 10−5, a genus/species/genogroup will be assigned. Matching length and genome localization are also determined.
+In the first step, the query sequence is analyzed against the Blast dataset. If the expectation (E)-value of the top hit is less than 10<sup>-5</sup>, a genus/species/genogroup will be assigned. Matching length and genome localization are also determined.
 
 ## Assignment of Genotype
 In the second step, phylogenetic analysis is performed on sequences for which the genogroup is identified and have a specified minimal length in specified region of the genome (plot below). Profile alignments of the query sequence are performed using ClustalW against the alignment of the reference sequences. 
