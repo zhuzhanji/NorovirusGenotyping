@@ -8,7 +8,11 @@ from Bio import SeqIO
 import config as cg
 from collections import defaultdict
 import os
+import os.path
 
+from Bio import Entrez
+
+Entrez.email = "forexample@ucdconnect.ie"
 
 # This is the accession id of the reference sequences for BLAST
 # I collected them by analyzing the results of RIVM
@@ -55,7 +59,7 @@ numbers = {
     'Caliciviridae_Vesivirus_San_Miguel_sea_lion_virus':['U15301']
 }
 
-wholef = open('./data/database/refseq.fasta', 'w') 
+wholef = open('./new_data/database/refseq.fasta', 'w') 
 for group, nums in numbers.items():
     for id in nums:
         handle = Entrez.efetch(db="sequences", id = id, rettype="fasta", retmode="text")
