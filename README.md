@@ -75,25 +75,35 @@ However, both tools are web-based, creating a break in the processing of sequenc
 
 
 # Methods
-305 nucleotide sequences for VP1 region phylogenetic analyses, and 232 nucleotide sequences for RdRp region phylogenetic analyses, representing the genetic diversity of all norovirus genogroups and genotypes were downloaded from GenBank, as described previously[^12]. (last download date: March 16 2024). 305 Complete ORF2 sequences (ranging from 530 to 580 amino acids in length) were extracted and translated from the former using Biopython[Cock, P. J. et al. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics 25, 1422–1423 (2009).]. 232 partial nucleotide sequences (762 nucleotides) of the RdRp region at the 3′-end of ORF1 were extracted from the latter.
+## Dataset Preparation
+30 norovirus whole genome sequences from RefSeq dataset[Brister JR, Ako-Adjei D, Bao Y, Blinkova O. NCBI viral genomes resource. Nucleic Acids Res. 2015 Jan;43(Database issue):D571-7 PubMed PubMedCentral] and GenBank were downloaded. In addtion,representatives of other genera of the Caliciviridae family were also downloaded. The Blastn database was built with these whole genome sequences aforementioned.
+
+<img width="600" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/bcc44256-9c9f-4d1c-a64a-97f0f459f067">
+
+305 nucleotide sequences for VP1 region phylogenetic analyses, and 232 nucleotide sequences for RdRp region phylogenetic analyses, representing the genetic diversity of all norovirus genogroups and genotypes were downloaded from GenBank, as described previously[^12]. (last download date: March 16 2024). 305 Complete ORF2 sequences (ranging from 530 to 580 amino acids in length) were extracted and translated from the former using Biopython[Cock, P. J. et al. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics 25, 1422–1423 (2009).]. 232 partial nucleotide sequences (762 nucleotides) of the RdRp region at the 3′-end of ORF1 were extracted from the latter. ORF2 nucleotide sequences of all strains were translated into amino acids and aligned using ClustalW. Separate alignments were carried out for VP1 amino acid sequences of GI (n=50) and GII (n=218) noroviruses. For the RdRp region, an alignment of all 232 norovirus sequences was generated, as well as separate alignments for GI (n=44) and GII (n=163) sequences. These two alignments are used as reference dataset in phylogenetic analysis.
 
 
 ![sequences](https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/7c695662-7de8-477f-9346-4a30dc7d1865  "sequences" )
 
-In addtion, 30 norovirus whole genome sequences from RefSeq dataset[Brister JR, Ako-Adjei D, Bao Y, Blinkova O. NCBI viral genomes resource. Nucleic Acids Res. 2015 Jan;43(Database issue):D571-7 PubMed PubMedCentral] and GenBank were also downloaded.
+## Assignment of Genogroup
+In the first step, the query sequence is analyzed against the Blast dataset. If the expectation (E)-value of the top hit is less than 10−5, a genus/species/genogroup will be assigned. Matching length and genome localization are also determined.
 
-<img width="600" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/bcc44256-9c9f-4d1c-a64a-97f0f459f067">
+## Assignment of Genotype
+In the second step, phylogenetic analysis is performed on sequences for which the genogroup is identified and have a specified minimal length in specified region of the genome (plot below). Profile alignments of the query sequence are performed using ClustalW against the alignment of the reference sequences. 
 
-
-## Workflow
+Phylogenetic trees are constructed using the neighbor-joining method with a HKY8536 substitution model(PHYML). A genotype is assigned only if the bootstrap value to the nearest neighbor exceeds 70%.
 
 <img width="661" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/877673d4-159c-4077-9f54-d5d21de959ba">
+
 
 <img width="714" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/d73f9ede-c0bd-4d7d-999b-38671986a626">
 
 
 # Results
 ## Genogrouping
+The test dataset contains 5986 sequences of the Caliciviridae family, including noroviruses. The result of our genotyping tool is compared against the result of RIVM online typing tool. The accuracy of our group assignment is 98.66%. Most of the discrepancies are due to the assignment of norovirus genogroup GIV, GVI, GIX and GX. It should be noted that GVI, GVIII, GIX and GX noroviruses are not included in the reference dataset of RIVM. So, if we exclude these cases, the accuracy of our group assignment would be still higher.
+
+<img width="377" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/6d207111-c299-429d-8b38-c321fe7a2011">
 
 ## Genotyping
 
