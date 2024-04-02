@@ -5,7 +5,7 @@ Python Scripts and Jupyter notebooks
 
 - scripts/blast_reference_data.py
 
-  This standalone python script downloads all the reference sequences for BLAST from GenBank. All fastas are written into './data/database/refseq.fasta'
+  This standalone python script downloads all the reference sequences for BLAST analysis from GenBank. All fastas are written into './data/database/refseq.fasta'. The target location could be changed in the script.
 
 2.Preparing Reference Sequences for MSA from GenBank
 
