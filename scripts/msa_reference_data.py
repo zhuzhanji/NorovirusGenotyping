@@ -15,7 +15,7 @@ Entrez.email = "forexample@ucdconnect.ie"
 
 # This two csv files were extracted from the supplementary material of this paper(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7011714/#R44)
 # They are the reference sequences used for phylogenetic analysis (in cluding MSA) in RIVM
-taxonomy = ['./new_data/rdrp_taxonomy.csv','./new_data/vp1_taxonomy.csv']
+taxonomy = ['./../new_data/rdrp_taxonomy.csv','./../new_data/vp1_taxonomy.csv']
 
 df = pd.read_csv(taxonomy[0], sep=",",skiprows = 1)
 
@@ -30,7 +30,7 @@ for j in range(df.shape[0]):
         continue
     # write fastas into respective groups
     if group not in files:
-        files[group] = open('./new_data/reference_sequences_RdRp/'+group+'.fasta', 'w') 
+        files[group] = open('./../new_data/reference_sequences_RdRp/'+group+'.fasta', 'w') 
     handle = Entrez.efetch(db="sequences", id = number, rettype="fasta", retmode="text")
     record = handle.read()
     files[group].write(record)
@@ -47,7 +47,7 @@ for j in range(df.shape[0]):
     if number == 'F529737':
         continue
     if group not in files:
-        files[group] = open('./new_data/reference_sequences_VP1/'+group+'.fasta', 'w') 
+        files[group] = open('./../new_data/reference_sequences_VP1/'+group+'.fasta', 'w') 
     handle = Entrez.efetch(db="sequences", id = number, rettype="fasta", retmode="text")
     record = handle.read()
     files[group].write(record)
