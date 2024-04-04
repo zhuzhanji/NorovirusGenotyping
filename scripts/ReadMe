@@ -1,1 +1,10 @@
-All scripts used for the typing of Norovirus
+All scripts used for the typing of Norovirus.
+
+-DataPreparation.py
+functions for dataset preparation and cleaning
+
+-utils.py
+functions for blast, clustalw etc.
+
+-workflow.py (under development)
+workflow for typing norovirus
