@@ -5,7 +5,7 @@ In [A. Kroneman 2011], the authors wrote 'In the first step the query sequence i
 
 <img width="615" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/31eb7e55-b28b-4000-81ab-13e2de89cac5">
 
-Here are the snapshots inside the result file. The column refseq contains all the reference sequences they use for BLAST analysis. It is a small reference dataset, one whole genome sequence (refseq) for one taxonomic group.
+Here are the snapshots inside the result file. The column refseq contains all the reference sequences they use for BLAST analysis. It is a small reference dataset, one whole genome sequence (refseq) for one taxonomic group. They don't have reference sequences for norovirus genogroup GIV, GVIII, GIX or GX.
 
 <img width="732" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/0efe39f0-86d8-470f-baf9-a127048c45dc">
 
