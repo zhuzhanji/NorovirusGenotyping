@@ -4,7 +4,7 @@
 
 - scripts/blast_reference_data.py
 
-  This standalone python script downloads all the reference sequences for BLAST analysis from GenBank. All fastas are written into './new_data/database/refseq.fasta'. The target location can be changed in the script.
+  This standalone python script downloads all the reference sequences for BLAST analysis from GenBank. All fastas are written into 'new_data/database/refseq_2.fasta'. The target location can be changed in 'DataPreparation.py'.
 
 - scripts/annotate_refseq.py
 
