@@ -57,7 +57,7 @@ The current destination locations are './new_data/reference_sequences_VP1/' for 
 This standalone python script parses the GenBank XML files and gets the coordinates of ORF1 and ORF2 for all the reference sequences for MSA. 
 
 **Result**
-The coordinates are written into '#GROUP_annotation.csv' ( i.e. GII_annotation.csv). 
+The coordinates are written into '#GROUP_annotation.csv' ( e.g. GII_annotation.csv). 
 ORF1 and ORF2 sequences will be extracted separately and saved as '#group.orf' under the same directory of fasta files.
 
 
@@ -117,7 +117,7 @@ It conducts BLAST analysis for a fasta file (1-N fastas)
 
 It accepts two parameters: query fasta file path (1-N fastas), result path (.csv)
 
-i.e. python blastn.py './../new_data/test_norovirus.fasta' './../new_data/test_result.csv'
+e.g. python blastn.py './../new_data/test_norovirus.fasta' './../new_data/test_result.csv'
 
 -workflow.py (under development)
 
