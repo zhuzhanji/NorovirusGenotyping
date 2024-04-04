@@ -1,8 +1,8 @@
-Reference dataset of Chhabra et al 2019 (Supplementary material 1)
-NT Sequences automatically downloaded from GenBank
-ORF1 and ORF2 extracted based on annotations on GenBank
-RdRp/GII/KX354134.1	was deleted because it does not contain ORF1.
-RdRp/GII/X76716.1 does not have ORF1 information on Genbank, so it was extracted using virulign. 
+rdrp_taxonomy.csv, vp1_taxonomy.csv are reference dataset of Chhabra et al 2019 (Supplementary material 1)
+NT Sequences automatically downloaded from GenBank are under reference_sequences_RdRp and reference_sequences_VP1
+ORF1 and ORF2 are extracted based on the annotations of GenBank
+RdRp/GII/KX354134.1	was deleted from reference dataset because it does not contain ORF1.
+RdRp/GII/X76716.1 does not have ORF1 information on Genbank, so it was computed using virulign. 
 There’s no F529737 on GenBank, so it is removed from the dataset.
 
 1.A.fasta: nt sequences of norovirus genogroup A
