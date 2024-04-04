@@ -97,8 +97,11 @@ def MakeAnnotation():
             df = df.reset_index().rename({'index':'id'},axis = 'columns')
             df.to_csv(files[j] + '_annotation.csv', sep=',', index=False, encoding='utf-8') 
 
-#extract orf1 and orf2 from sequences and save as '#group#_.orf' files
+# extract orf1 and orf2 from sequences and save as '#group#_.orf' files
+# write orfs of different genogroups into all.orf file, for pre-MSA
 def ExtractOrfs():
+    taxfile1 = pd.read_csv(cg.paths['taxonomy']['rdrp'], sep=",",skiprows = 1)
+    taxfile2 = pd.read_csv(cg.paths['taxonomy']['vp1'], sep=",",skiprows = 1)
     for group, paths in cg.paths['prefix'].items():
         if os.path.isfile(paths[0] + '_annotation.csv'):
             df = pd.read_csv(paths[0] + '_annotation.csv', sep=",")
@@ -106,7 +109,11 @@ def ExtractOrfs():
             for seq_record in SeqIO.parse(paths[0]+'.fasta', "fasta"):
                 id, sequence = seq_record.id.__str__(), seq_record.seq.__str__()
                 t1 = df[df['id'] == id].iloc[0]
-                file.write('>'+id+'\n')
+                file.write('>'+group + '|')
+                t2 = taxfile1[taxfile1['GenBank accesion number'] == id.split('.')[0]]
+                if len(t2) != 0:
+                    file.write(t2.iloc[0]['New P-type'].replace(' ','_') + '|')                
+                file.write(id+'\n')
                 file.write(sequence[max(t1['rdrp_start'] - 1, t1['rdrp_end'] - 762) :t1['rdrp_end']]+'\n')
             file.close()
         
@@ -116,9 +123,33 @@ def ExtractOrfs():
             for seq_record in SeqIO.parse(paths[1]+'.fasta', "fasta"):
                 id, sequence = seq_record.id.__str__(), seq_record.seq.__str__()            
                 t1 = df[df['id'] == id].iloc[0]
-                file.write('>'+id+'\n')
+                file.write('>'+group + '|')
+                t2 = taxfile2[taxfile2['GenBank accesion number'] == id.split('.')[0]]
+                if len(t2) != 0:
+                    file.write(t2.iloc[0]['New genotype'].replace(' ','_') + '|')
+            
+                file.write(id + '\n')
                 file.write(sequence[t1['vp1_start'] - 1:t1['vp1_end']]+'\n')
             file.close()
+            
+    # writing all orfs into ofr1/orf2 file, for pre-MSA
+    file1 = open('./../new_data/reference_sequences_RdRp/all.orf', 'w') 
+    file2 = open('./../new_data/reference_sequences_VP1/all.orf', 'w') 
+
+    for group, p in cg.paths['prefix'].items():
+        if os.path.isfile(p[0] + '.orf'):
+            for seq_record in SeqIO.parse(p[0] + '.orf', "fasta"):
+                id, sequence = seq_record.id.__str__(), seq_record.seq.__str__()
+                file1.write('>'+id + '\n')
+                file1.write(sequence + '\n')
+            
+        if os.path.isfile(p[1] + '.orf'):            
+            for seq_record in SeqIO.parse(p[1] + '.orf', "fasta"):
+                id, sequence = seq_record.id.__str__(), seq_record.seq.__str__()
+                file2.write('>'+id + '\n')
+                file2.write(sequence + '\n')
+    file1.close()
+    file2.close()
 
 
 def TranslateORF2():
