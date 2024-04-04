@@ -1,3 +1,23 @@
+## dependent packages
+- blast
+- clustalw
+- python3
+- 
+After blast and clustalw are installed in your computer, you should check scripts/config.py.
+The absolute paths of blastn, makeblastdb, clustalw2 are written in scripts/config.py, you should change them first according to where blast and clustal have been installed on your computer.
+
+<img width="719" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/af895850-6e48-4ba9-9850-ede72536c833">
+
+You can also add blastn, makeblastdb, clustalw2 to the environment paths, then change "exe" field like thie:
+    "exe":
+    {
+        "makeblastdb":"makeblastdb",
+        "blastn":"blastn",
+        "clustal":"clustalw2"
+    },
+
+
+
 ## data preparation
 
 All data used are under 'new_data/', please refer to 'new_data/readme' for furthur knowledge.
