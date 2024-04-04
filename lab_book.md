@@ -41,7 +41,7 @@ clustalw.sh calls clustalw.py. clustalw.py uses clustalw to align all GI orf1s i
 These files can be found under new_data/reference_sequences_RdRp/ and new_data/reference_sequences_VP1/
 
 -------------
-## Wordflow
+## Workflow
 
 1.BLAST query and genogroup assignment
 
