@@ -1,21 +1,29 @@
-rdrp_taxonomy.csv, vp1_taxonomy.csv are the reference dataset for BLAST, downloaded from Chhabra et al 2019 (Supplementary material 1)
-NT Sequences automatically downloaded from GenBank are under reference_sequences_RdRp and reference_sequences_VP1
-ORF1 and ORF2 are extracted based on the annotations of GenBank
-RdRp/GII/KX354134.1	was deleted from reference dataset because it does not contain ORF1.
-RdRp/GII/X76716.1 does not have ORF1 information on Genbank, so it was computed using virulign. 
-There’s no F529737 on GenBank, so it is removed from the dataset.
+0.rdrp_taxonomy.csv, vp1_taxonomy.csv: reference dataset for BLAST, downloaded from Chhabra et al 2019 (Supplementary material 1)
+
 
 1.A.fasta: nt sequences of norovirus genogroup A
+NT Sequences automatically downloaded from GenBank are under 'reference_sequences_RdRp/' and 'reference_sequences_VP1/'
+RdRp/GII/KX354134.1	was deleted from the reference dataset because it does not contain ORF1 region.
+RdRp/GII/X76716.1 does not have ORF1 annotation on Genbank, so it was annotated using virulign. 
+There’s no F529737 on GenBank, so it is removed from the dataset.
+
 2.A.orf: ORF sequence of the nt sequences in A.fasta
+ORF1 and ORF2 are extracted based on the annotations of GenBank
+
 3.A_annotation.csv: ORF coordinates of the nt sequences in A.fasta
+
 4.all.orf: all the ORF sequences from different genogroups
   id format: genogroup|[Ptype  genotype]|genbank accesion number
-  (caution: vp1/all.orf contains only genbank accesion number, which is to be corrected)
+  i.e. >GI|GI.P1|KF039733.1
+
 5.rdrp_taxonomy.csv: References strains for norovirus RdRp P-types
+
 6.vp1__taxonomy.csv: References strains for norovirus VP1 genotypes
 
-7.test_norovirus.fasta is the test dataset, it is too large to be uploaded.
-results_rivm.csv is the typing result of RIVM for the test dataset.
-test_result_3.csv is the typing(grouping assignment sofar) of my method. The column BLAST contains the assigned groups for respective queries(column query).
+7.test_norovirus.fasta: the test dataset, it is too large to be uploaded.
+
+8.results_rivm.csv: typing result of RIVM for the test dataset.
+
+9.test_result_3.csv: typing result(group assignment so far) of my method. Column BLAST contains the assigned groups for respective queries(column query).
 
 
