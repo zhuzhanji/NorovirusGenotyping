@@ -1,4 +1,4 @@
-rdrp_taxonomy.csv, vp1_taxonomy.csv are reference dataset of Chhabra et al 2019 (Supplementary material 1)
+rdrp_taxonomy.csv, vp1_taxonomy.csv are the reference dataset for BLAST, downloaded from Chhabra et al 2019 (Supplementary material 1)
 NT Sequences automatically downloaded from GenBank are under reference_sequences_RdRp and reference_sequences_VP1
 ORF1 and ORF2 are extracted based on the annotations of GenBank
 RdRp/GII/KX354134.1	was deleted from reference dataset because it does not contain ORF1.
