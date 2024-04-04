@@ -10,5 +10,12 @@ There’s no F529737 on GenBank, so it is removed from the dataset.
 3.A_annotation.csv: ORF coordinates of the nt sequences in A.fasta
 4.all.orf: all the ORF sequences from different genogroups
   id format: genogroup|[Ptype  genotype]|genbank accesion number
+  (caution: vp1/all.orf contains only genbank accesion number, which is to be corrected)
 5.rdrp_taxonomy.csv: References strains for norovirus RdRp P-types
 6.vp1__taxonomy.csv: References strains for norovirus VP1 genotypes
+
+7.test_norovirus.fasta is the test dataset, it is too large to be uploaded.
+results_rivm.csv is the typing result of RIVM for the test dataset.
+test_result_3.csv is the typing(grouping assignment sofar) of my method. The column BLAST contains the assigned groups for respective queries(column query).
+
+
