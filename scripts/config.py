@@ -2,6 +2,7 @@ paths = {
     # annotation file for blast ref seq
     "annotation": "./../new_data/database/refseq_annotation.csv",
 
+    # file prefix for fastas/orf/annotation/amino acids
     "prefix":
     {
       'GI':["./../new_data/reference_sequences_RdRp/GI", "./../new_data/reference_sequences_VP1/GI"],
@@ -17,11 +18,13 @@ paths = {
       'GIX':["", "./../new_data/reference_sequences_VP1/GIX"],
       'GX':["./../new_data/reference_sequences_RdRp/GX", "./../new_data/reference_sequences_VP1/GX"],
     },
+    # extracted from the published paper of noronet
     "taxonomy":
     {
       "rdrp":'./../new_data/rdrp_taxonomy.csv',
       "vp1":'./../new_data/vp1_taxonomy.csv'
     },
+    # BLAST dataset
     "database": "./../new_data/database/refseqdb_2",
     "exe":
     {
@@ -72,4 +75,18 @@ numbers = {
     'Caliciviridae_Nacovirus_Goose_calicivirus':['NC_024078'],
     'Caliciviridae_Vesivirus_Ferret_badger_vesivirus':['NC_027122'],
     'Caliciviridae_Vesivirus_San_Miguel_sea_lion_virus':['U15301']
+}
+
+# All the accession number of norovirus for BLAST analysis
+noronumbers = {
+    'GI':['NC_001959', 'NC_039897.1', 'NC_044853','NC_044854.1', 'NC_044856.1'],
+    'GII':['NC_029646', 'NC_039475.1', 'NC_039476.1', 'NC_039477.1','NC_040876', 'NC_044045.1','NC_044046.1', 'NC_044932'], 
+    'GIII':['NC_029645'],
+    'GIV':['NC_029647', 'NC_044855.1'],
+    'GV':['NC_008311', 'MW174170.1'],
+    'GVI':['NC_044047','MW662289.1','MN908340.1','MW945229.1'],
+    'GVII':['FJ692500', 'OL757872.1'],
+    'GVIII':['AB985418.2'],
+    'GIX':['OR050586.1','OR050585.1','OR050584.1'],
+    'GX':['KJ790198.1','MF373609.1']
 }
