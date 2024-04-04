@@ -7,9 +7,11 @@ from Bio import Entrez
 from Bio import SeqIO
 from Bio.Seq import Seq
 import pandas as pd
-Entrez.email = "yang.liu2@ucdconnect.ie"
 
-# download reference sequences from GenBank
+Entrez.email = "foreexample@ucdconnect.ie"
+
+# Download reference sequences from GenBank
+# Write these fasta into refseq_2.fasta
 def DownloadFastaFromGenbak():  
     wholef = open('./../new_data/database/refseq_2.fasta', 'w') 
     for group, nums in cg.numbers.items():
@@ -21,7 +23,13 @@ def DownloadFastaFromGenbak():
             #print(id)
     wholef.close()
 
-# Extract ORF1/2 coordinates from GenBank XML 
+
+# This functions retrives and parses the xml annotation file of a sequence (gbid) 
+# gbid: genbank accension number, 
+# orf1: if orf1 coordinates should be extracted, 
+# orf2: if orf2 coordinates should be extracted,
+# return value (list)
+# {'orf1':[x,y], 'orf2':[x,y]}
 def getORF(gbid:str, orf1: bool, orf2: bool):
     handle = Entrez.efetch(db="nucleotide", id = gbid, rettype="xml", retmode="xml")
     record = handle.read()
@@ -44,6 +52,28 @@ def getORF(gbid:str, orf1: bool, orf2: bool):
 
     return result
 
+# This function extracts coordinates of all the reference sequences for BLAST
+# The result annotation file is './new_data/database/refseq_annotation.csv'
+def annotate_refseq():
+    annotation = {}
+    for group, nums in cg.noronumbers.items():
+        for id in nums:
+            annotation[id] = [-1] * 4
+            res = getORF(id, True, True)
+            if 'orf1' in res:
+                annotation[id][:2] = res['orf1']
+            if 'orf2' in res:
+                annotation[id][2:] = res['orf2']
+
+    # This annotation file will contain 5 columns: genbank id and coordinates
+    cols = ["rdrp_start", "rdrp_end", "vp1_start", "vp1_end"]
+    df = pd.DataFrame.from_dict(annotation, orient='index', columns=cols)
+    df = df.reset_index().rename({'index':'id'},axis = 'columns')
+    # Default location of this annotation file
+    df.to_csv("./new_data/database/refseq_annotation.csv", sep=',', index=False, encoding='utf-8') 
+
+
+    
 # Annotate sequences for C-typing and P-typing separately, and save as '#Group#_annotation.csv'
 def MakeAnnotation(): 
     for group, files in cg.paths['prefix'].items():
