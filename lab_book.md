@@ -1,4 +1,36 @@
-## dependent packages
+## Part 1. Discoveries on the implementation of RIVM
+
+### The reference dataset for BLAST analysis
+In [A. Kroneman 2011], the authors wrote 'In the first step the query sequence is analyzed using BLAST against a reference set of whole genome sequences representing different taxonomic groups', but they didn't offer more details. in order to find out the reference dataset, a testset of over 5000 fastas of Caliciviridae family were uploaded to RIVM as queries. Result files were downloaded via the blue link at the bottom.
+
+<img width="615" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/31eb7e55-b28b-4000-81ab-13e2de89cac5">
+
+Here are the snapshots inside the result file. The column refseq contains all the reference sequences they use for BLAST analysis. It is a small reference dataset, one whole genome sequence (refseq) for one taxonomic group.
+
+<img width="732" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/0efe39f0-86d8-470f-baf9-a127048c45dc">
+
+<img width="726" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/70f30505-6298-454e-bb4e-cbbfe741951c">
+
+### The reference dataset for MSA
+
+Here are some snapshots of the report page. Here are what we can deduce from them:
+
+1. They use PAUP* for phylogenetic tree construction
+2. They use bootstrap
+
+<img width="792" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/5accc785-a80e-4dfd-8e5a-08f2c5f1fb8a">
+
+<img width="830" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/423382f5-4f29-487b-a84b-faf9655a5f3d">
+
+<img width="379" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/8d1bdf04-b0db-47bc-8172-efc8fba882fa">
+
+
+3. Here is the snapshot of the alignment. They align nucleotide sequences.
+
+<img width="552" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/658a0af0-bd8f-45b2-972e-9044ba4a7437">
+
+
+## Part2. Dependent packages
 - blast
 - clustalw
 - python3
@@ -17,6 +49,7 @@ You can also add blastn, makeblastdb, clustalw2 to the environment paths, then c
     },
 
 
+## Part3. Documentation of scripts
 
 ## data preparation
 
