@@ -1,6 +1,6 @@
 ## data preparation
 
-All data used are under 'new_data/', please read new_data/readme for furthur knowledge of different files.
+All data used are under 'new_data/', please refer to 'new_data/readme' for furthur knowledge of different files.
 
 ### 1.Preparing Reference Sequences for BLAST analysis
 
