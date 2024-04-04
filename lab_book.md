@@ -30,11 +30,19 @@ Original data and data produced are under 'new_data/', please refer to 'new_data
 
 This standalone python script downloads all the reference sequences for BLAST analysis from GenBank. It then parses the GenBank XML files and extracts the coordinates of ORF1 and ORF2 for all the blast reference sequences. The results are written to "./new_data/database/refseq_annotation.csv". 
 
+<img width="373" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/8c4a9a99-4404-4ce2-b4d1-38045073c9ae">
+
+
 **Result**
 
 All fastas are written into 'new_data/database/refseq_2.fasta'. The target location is hardcoded in 'DataPreparation.py'.
-It should be noted that the paser is not 100% reliable, some coordinates might contain leading or trailing '<' or '>', so manual correction is needed.
+
+ <img width="723" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/2bfc3e6e-d3a7-4c6a-adb3-5f6cdaf9beb7">
  
+The paser is **not 100% reliable**, some coordinates might contain leading or trailing '<','>', so manual correction is needed.
+
+
+
 
 ### 2.Preparing Reference Sequences for MSA from GenBank
 
@@ -48,17 +56,27 @@ This standalone python script downloads all the reference sequences for phylogen
 
 Fastas of the same genogroup will be written into 'group'.fasta, e.g. GII.fasta. 
 
-The current destination locations are './new_data/reference_sequences_VP1/' for ORF2 reference sequences and './new_data/reference_sequences_RdRp/' for ORF1 reference sequences.
+<img width="108" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/6a804f09-9335-4c34-87f0-e18395c2f6dc">
+
+Current locations are './new_data/reference_sequences_VP1/' for ORF2 reference sequences and './new_data/reference_sequences_RdRp/' for ORF1 reference sequences.
+
 
 - scripts/extract_orfs.py
 
 **Function**
 
-This standalone python script parses the GenBank XML files and gets the coordinates of ORF1 and ORF2 for all the reference sequences for MSA. 
+This standalone python script retrieves and parses the GenBank XML files, extracts the coordinates of ORF1 and ORF2 for all the reference sequences for MSA. 
 
 **Result**
 The coordinates are written into '#GROUP_annotation.csv' ( e.g. GII_annotation.csv). 
+
+<img width="156" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/c05a9068-0c1f-41fe-aca4-5a01717aef24">
+
 ORF1 and ORF2 sequences will be extracted separately and saved as '#group.orf' under the same directory of fasta files.
+All orf1 or rdrp region are written into rdrp/all.orf. All orf2 or rdrp region are written into vp1/all.orf. 
+
+<img width="97" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/c7b6943e-48d5-4990-9a88-c98340ee6cdb">
+<img width="686" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/ae393b49-1e31-485d-aa8c-e8cdffdcf5e7">
 
 
 ### 3.Translation of VP1 gene
@@ -71,7 +89,7 @@ In DataPreparation.py, function TranslateORF2() translates all the ORF2 sequence
 
 'All.pro' contains all the amino acids of ORF2 sequences of different genogroups. 
 
-AA of different genogroups will also be written into different .pro files.
+AA of different genogroups will be written into respective .pro files.
 
 ### 4.Making BLAST database
 -scripts/makedb.sh
@@ -79,11 +97,13 @@ AA of different genogroups will also be written into different .pro files.
 
 **Function**
 
-makedb.sh calls makedb.py. makedb.py takes two parameters: source fasta file, output database path.  
+makedb.sh calls makedb.py. 
 
-The default source fasta file is refseq_2.fasta produced in step 1. 
+makedb.py takes two parameters: source fasta file, nucleotide blast database path.  
 
-The default name of the database is 'refseqdb_2'. It's under new_data/database.
+The default source fasta file is the refseq_2.fasta produced in step 1. 
+
+The default name of the database is 'refseqdb_2', which is also under new_data/database.
 
 **Result**
 
@@ -94,11 +114,11 @@ It makes a nt database from the source fasta file.
 -clustalw.sh
 -clustalw.py
 
-clustalw.sh calls clustalw.py. 
-
 **Function**
 
-clustalw.py uses clustalw to align all GI orf1s into rdrp/GI.aln, all GI vp1/orf2s into rdrp/GII.aln, all GII orf1 into vp1/GII.aln, all GII orf2 into rdrp/GII.aln, orf1 of all genogroups into vp1/all.orf.
+clustalw.sh calls clustalw.py. 
+
+clustalw.py uses clustalw to align all GI orf1s into rdrp/GI.aln, all GI vp1/orf2s into rdrp/GII.aln, all GII orf1s into vp1/GII.aln, all GII orf2s into rdrp/GII.aln, orf1s of all genogroups into rdrp/all.orf, orf2s of all genogroups into vp1/all.orf.
 
 **Result**
 
