@@ -14,7 +14,7 @@ ORF1 and ORF2 are extracted based on the annotations of GenBank
 
 4.all.orf: all the ORF sequences from different genogroups
   id format: genogroup|[Ptype  genotype]|genbank accesion number
-  i.e. >GI|GI.P1|KF039733.1
+  e.g. >GI|GI.P1|KF039733.1
 
 5.rdrp_taxonomy.csv: References strains for norovirus RdRp P-types
 
