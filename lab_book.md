@@ -10,7 +10,7 @@ This standalone python script downloads all the reference sequences for BLAST an
 
 All fastas are written into 'new_data/database/refseq_2.fasta'. The target location is hardcoded in 'DataPreparation.py'.
 
-It then parses the GenBank XML files and gets the coordinates of ORF1 and ORF2 for all the blast reference sequences. The results is written to "./new_data/database/refseq_annotation.csv". 
+It then parses the GenBank XML files and extracts the coordinates of ORF1 and ORF2 for all the blast reference sequences. The results are written to "./new_data/database/refseq_annotation.csv". 
 
 It should be noted that the paser is not 100% reliable, some coordinates might contain leading or trailing '<' or '>', so manual correction is needed.
  
