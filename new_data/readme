@@ -26,4 +26,14 @@ ORF1 and ORF2 are extracted based on the annotations of GenBank
 
 9.test_result_3.csv: typing result(group assignment so far) of my method. Column BLAST contains the assigned groups for respective queries(column query).
 
+10.dataset/refseq_2.fasta: It contains all the reference sequences for BLAST analysis. The blast database was built from it. 
+
+11.dataset/refseq_annotation.csv: It contains all the ORF coordinates for refseq_2.fasta
+
+12.refseqdb_2.*: BLAST database
+
+13.A.aln: alignment of the orf1(or orf2) of genogroup A. It's in CLUSTAL format.
+
+14. all.aln: alignment of orf1(or orf2) of all genogroups. It's in CLUSTAL format.
+
 
