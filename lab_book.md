@@ -11,6 +11,9 @@ Here are the snapshots inside the result file. The column refseq contains all th
 
 <img width="726" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/70f30505-6298-454e-bb4e-cbbfe741951c">
 
+### Complement of the query sequence
+
+
 ### The reference dataset for MSA
 
 Here are some snapshots of the report page. Here are what we can deduce from them:
