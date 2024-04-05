@@ -166,7 +166,7 @@ These files can be found under new_data/reference_sequences_RdRp/ and new_data/r
 
 ### 1.BLAST query and genogroup assignment
 
--blastn.py
+- blastn.py
 
 **Function**
 
@@ -176,6 +176,12 @@ It accepts two parameters: query fasta file path (1-N fastas), result path (.csv
 
 e.g. python blastn.py './../new_data/test_norovirus.fasta' './../new_data/test_result.csv'
 
--workflow.py (under development)
+**Function**
 
-Currently it can assign genogroup after BLAST analysis. It then checks if the matching segment meets the length and region criteria. If all criteria are met, we should align the query sequence against the pre-aligned clustal file. Then phylogenectic trees should be constructed from this alignment. A genotype then can be assigned based on the supporting value.
+- workflow.py (under development)
+
+It conducts the typing of norovirus. Currently it can only assign genogroup using BLAST analysis. Then it checks if the matching segment meets the length and region criteria. 
+
+Todo:
+
+If all criteria are met, we should align the query sequence against the pre-aligned clustal alignment. Then phylogenectic trees should be constructed from this alignment using PAUP*. A genotype then can be assigned based on the supporting value of this query in the tree.
