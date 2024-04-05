@@ -78,6 +78,7 @@ numbers = {
 }
 
 # All the accession number of norovirus for BLAST analysis
+# RIVM has only one refseq for each genogroup, in this project, more refseqs are included.
 noronumbers = {
     'GI':['NC_001959', 'NC_039897.1', 'NC_044853','NC_044854.1', 'NC_044856.1'],
     'GII':['NC_029646', 'NC_039475.1', 'NC_039476.1', 'NC_039477.1','NC_040876', 'NC_044045.1','NC_044046.1', 'NC_044932'], 
