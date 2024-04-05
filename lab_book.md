@@ -5,7 +5,7 @@ In [A. Kroneman 2011], the authors wrote 'In the first step the query sequence i
 
 <img width="615" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/31eb7e55-b28b-4000-81ab-13e2de89cac5">
 
-Here are the snapshots inside the result file. The column refseq contains all the reference sequences they use for BLAST analysis. It is a small reference dataset, one whole genome sequence (refseq) for one taxonomic group. They don't have reference sequences for norovirus genogroup GIV, GVIII, GIX or GX.
+Here are the snapshots inside the result file. The column refseq contains all the reference sequences they use for BLAST analysis. It is a small reference dataset, one whole genome sequence (refseq) for each taxonomic group and without sequences of norovirus GIV, GVIII, GIX or GX.
 
 <img width="732" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/0efe39f0-86d8-470f-baf9-a127048c45dc">
 
@@ -25,7 +25,7 @@ Here are some snapshots of the report page. Here are what we can deduce from the
 <img width="379" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/8d1bdf04-b0db-47bc-8172-efc8fba882fa">
 
 
-3. Here is the snapshot of the alignment. They align nucleotide sequences.
+3. Here is the snapshot of the alignment of norovirus GII. They align nucleotide sequences. It is highly probable that they have extracted the ORF region from the query sequence based on the result of BLAST analysis.  
 
 <img width="552" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/658a0af0-bd8f-45b2-972e-9044ba4a7437">
 
