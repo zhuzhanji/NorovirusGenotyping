@@ -55,6 +55,7 @@ You can also add blastn, makeblastdb, clustalw2 to the environment paths, then c
 ## Part3. Documentation of scripts
 
 - config.py
+  
 **Function**
 It manages all the paths used in the project.Please read it and 'new_data/readme' first.
 
@@ -108,6 +109,7 @@ Current locations are './new_data/reference_sequences_VP1/' for ORF2 reference s
 This standalone python script retrieves and parses the GenBank XML files, extracts the coordinates of ORF1 and ORF2 for all the reference sequences for MSA. 
 
 **Result**
+
 The coordinates are written into '#GROUP_annotation.csv' ( e.g. GII_annotation.csv). 
 
 <img width="156" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/c05a9068-0c1f-41fe-aca4-5a01717aef24">
