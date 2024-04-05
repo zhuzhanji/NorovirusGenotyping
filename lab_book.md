@@ -51,6 +51,10 @@ You can also add blastn, makeblastdb, clustalw2 to the environment paths, then c
 
 ## Part3. Documentation of scripts
 
+- config.py
+**Function**
+It manages all the paths used in the project.Please read it and 'new_data/readme' first.
+
 ## data preparation
 
 Original data and data produced are under 'new_data/', please refer to 'new_data/readme' for furthur knowledge.
