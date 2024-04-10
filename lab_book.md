@@ -199,4 +199,6 @@ It's a R script called by workflow.py. It builds a phylogentic tree using HKY mo
 <img width="500" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/f94e4378-aa90-4c1f-89f3-87206b831a07">
 
 Todo:
-The bootstrap tree should be parsed. A genotype can be assigned based on the supporting value of this query in the tree.
+1. The bootstrap tree should be parsed. A genotype can be assigned based on the supporting value of this query in the tree.
+2. Complement or reverse complement sequences of the queries should be gennerated before BLAST analysis. RIVM does this.
+3. If the query belongs to GI or GII, it should be aligned againt the reference sequences of the same groups. But if the qery belongs to other genogroups, what sequences should it align to, since there are not many reference sequences for these genogroups ?
