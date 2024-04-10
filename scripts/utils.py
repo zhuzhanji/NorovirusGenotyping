@@ -64,7 +64,7 @@ def Clustalw(sequences: str, output: str, exepath: str = cg.paths['exe']['clusta
 # Clustalw msa, sequence against alignment
 def ClustalwAln(query: str, alignment: str, output: str, exepath: str = cg.paths['exe']['clustal']):
     # clustalw2 -profile1=file1.aln -profile2=query.fasta -sequences
-    cline = ClustalwCommandline(exepath, profile1=alignment, profile2=query, sequences = True, outfile = output, output = 'NEXUS')    
+    cline = ClustalwCommandline(exepath, profile1=alignment, profile2=query, sequences = True, outfile = output, output = 'PHYLIP')    
     cline()
 
 def GetGenotype(id: str, taxfile: str):
