@@ -181,12 +181,19 @@ It accepts two parameters: query fasta file path (1-N fastas), result path (.csv
 
 e.g. python blastn.py './../new_data/test_norovirus.fasta' './../new_data/test_result.csv'
 
-**Function**
 
 - workflow.py (under development)
 
-It conducts the typing of norovirus. Currently it can only assign genogroup using BLAST analysis. Then it checks if the matching segment meets the length and region criteria. 
+**Function**
+
+It conducts the typing of norovirus. Currently it can assign genogroups using BLAST analysis. Then it checks if the matching segment meets the length and region criteria. If all criteria are met, it will align the query sequence against the pre-aligned clustal alignment, then call phylo.R to build a bootstrap tree.
+
+- phylo.R
+- 
+**Function**
+
+It's a R script called by workflow.py. It builds a phylogentic tree using HKY model and bootstrapping. Supporting values are written in this tree as labels
+<img width="500" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/f94e4378-aa90-4c1f-89f3-87206b831a07">
 
 Todo:
-
-If all criteria are met, we should align the query sequence against the pre-aligned clustal alignment. Then phylogenectic trees should be constructed from this alignment using PAUP*. A genotype then can be assigned based on the supporting value of this query in the tree.
+The bootstrap tree should be parsed. A genotype can be assigned based on the supporting value of this query in the tree.
