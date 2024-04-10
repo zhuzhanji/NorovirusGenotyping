@@ -1,11 +1,17 @@
 import utils as utl
 import pandas as pd
 import config as cg
+import os
+import subprocess
 
 def WorkFlow(querypath: str):
     # step1, Blast query against large database, assign genogroup
-    utl.QueryNcl(querypath, './tmp.csv')
-    results = pd.read_csv('./tmp.csv', sep="\t")
+    if not os.path.exists("#tmp#"):
+        os.mkdir('#tmp#')
+    tmpdir = './#tmp#/'
+
+    utl.QueryNcl(querypath, tmpdir + '/tmp.csv')
+    results = pd.read_csv(tmpdir + '/tmp.csv', sep="\t")
     if results.shape[0] == 0:
         print('Blast Query Failed')
         return
@@ -29,8 +35,14 @@ def WorkFlow(querypath: str):
         #MSA aginast ORF1.aln
         # step 3.1
         #phylogenetic analysis
-        #utl.ClustalwAln(querypath, "./../new_data/reference_sequences_RdRp/GI.aln", './EU085529_aln')
         print('ofr1 msa')
+        aln = cg.paths['aln'][0]
+        utl.ClustalwAln(querypath, aln, tmpdir + 'alignment_orf1.phylip')
+        print('Tree construction')
+        result = subprocess.call(["Rscript", "./phylo.R", 
+                                    tmpdir + 'alignment_orf1.phylip',
+                                    tmpdir + "boot_tree_orf1.tre"])
+
 
     if min(subject_end, line['vp1_end']) - max(subject_start, line['vp1_start']) < 100:
         print('Sequence does not overlap sufficiently (>100 nucleotides) with ORF2')
@@ -43,7 +55,13 @@ def WorkFlow(querypath: str):
         print('orf2 msa')
         print(subject_end, subject_start)
         print(line['rdrp_end'], line['rdrp_start'])
-        #utl.ClustalwAln(querypath, "./../new_data/reference_sequences_VP1/GI.aln", './EU085529_vp1_aln')
+
+        aln = cg.paths['aln'][1]
+        utl.ClustalwAln(querypath, aln, tmpdir + 'alignment_orf2.phylip')
+        print('Tree construction')
+        result = subprocess.call(["Rscript", "./phylo.R", 
+                                    tmpdir + 'alignment_orf2.phylip',
+                                    tmpdir + "boot_tree_orf2.tre"])
   
 
 #EU085529.1
