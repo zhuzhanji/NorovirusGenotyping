@@ -18,6 +18,9 @@ paths = {
       'GIX':["", "./../new_data/reference_sequences_VP1/GIX"],
       'GX':["./../new_data/reference_sequences_RdRp/GX", "./../new_data/reference_sequences_VP1/GX"],
     },
+    "aln":
+      ["./../new_data/reference_sequences_RdRp/all.aln", "./../new_data/reference_sequences_VP1/all.aln"]
+    ,
     # extracted from the published paper of noronet
     "taxonomy":
     {
