@@ -189,6 +189,7 @@ e.g. python blastn.py './../new_data/test_norovirus.fasta' './../new_data/test_r
 It conducts the typing of norovirus. Currently it can assign genogroups using BLAST analysis. Then it checks if the matching segment meets the length and region criteria. If all criteria are met, it will align the query sequence against the pre-aligned clustal alignment and save the alignment file in 'phylip' fomrmat. Then it will call phylo.R to build a bootstrap tree from the phylip alignment file.
 
 Test fasta is written downbelow in this script. Change it when needed.
+
 <img width="334" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/5bdb7bdb-7f03-4e4e-9f9b-3c76d23fe117">
 
 - phylo.R
@@ -196,6 +197,7 @@ Test fasta is written downbelow in this script. Change it when needed.
 **Function**
 
 It's a R script called by workflow.py. It builds a phylogentic tree using HKY model and bootstrapping. Supporting values are written in this tree as labels
+
 <img width="500" alt="image" src="https://github.com/zhuzhanji/NorovirusGenotyping/assets/37281560/f94e4378-aa90-4c1f-89f3-87206b831a07">
 
 Todo:
